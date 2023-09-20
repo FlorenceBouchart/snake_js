@@ -41,7 +41,9 @@ function update() {
     clearScreen();
     food.draw();
     snake.update();
-    setTimeout(update, 150);
+    if (snake.alive){
+        setTimeout(update, 100);
+    }
 }
 
 

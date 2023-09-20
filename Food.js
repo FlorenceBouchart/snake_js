@@ -11,7 +11,7 @@ class Food {
     }
 
     draw() {
-        ctx.fillStyle = 'yellow';
+        ctx.fillStyle = 'red';
         ctx.fillRect(this.x * this.size, this.y * this.size, this.size, this.size);
     }
 }

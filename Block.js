@@ -2,6 +2,8 @@ class Block {
 constructor(x, y, size) {
     this.x = x;
     this.y = y;
+    this.oldX = x;
+    this.oldY = y;
     this.size = size;
 }
 
@@ -19,8 +21,16 @@ teleportIfOutOfMap() {
     }
     }
 
+    setPosition(x, y) {
+        this.oldX = this.x;
+        this.oldY = this.y;
+        this.x = x;
+        this.y = y;
+    }
+
 draw() {
     ctx.fillStyle = 'olive';
     ctx.fillRect(this.x*this.size, this.y*this.size, this.size, this.size);
 }
+
 }
